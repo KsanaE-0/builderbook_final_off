@@ -1,9 +1,9 @@
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 import App from 'next/app';
+import PropTypes from 'prop-types';
 import React from 'react';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 
 import { theme } from '../lib/theme';
 
@@ -30,6 +30,8 @@ class MyApp extends App {
 
     return (
       <ThemeProvider theme={theme}>
+        {/* ThemeProvider makes the theme available down the React tree thanks to React context. */}
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
